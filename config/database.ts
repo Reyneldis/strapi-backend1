@@ -34,8 +34,8 @@ export default ({ env }) => {
         host: env('DATABASE_HOST', 'localhost'),
         port: env.int('DATABASE_PORT', 5432),
         database: env('DATABASE_NAME', 'tienda-dev'),
-        user: env('DATABASE_USERNAME', 'tienda_dev_user'),
-        password: env('DATABASE_PASSWORD', 'OJGL6Ri4WkpFEr4oic8OjXGw3tx0baOf'),
+        user: env('DATABASE_USERNAME', ''),
+        password: env('DATABASE_PASSWORD', ''),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),

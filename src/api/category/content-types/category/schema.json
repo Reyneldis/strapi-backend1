@@ -12,20 +12,26 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "categoryName": {
       "type": "string"
     },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "categoryName"
     },
-    "articles": {
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "products": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::article.article",
+      "target": "api::product.product",
       "mappedBy": "category"
-    },
-    "description": {
-      "type": "text"
     }
   }
 }
